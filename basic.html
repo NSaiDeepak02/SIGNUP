@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Basic Web App</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        input {
+            padding: 10px;
+            width: 200px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    🚀 My First Web App
+</header>
+
+<div class="container">
+    <h2>Enter Your Name</h2>
+
+    <input type="text" id="nameInput" placeholder="Your name">
+
+    <br>
+
+    <button onclick="showMessage()">Submit</button>
+
+    <div id="output"></div>
+</div>
+
+<script>
+    function showMessage() {
+        let name = document.getElementById("nameInput").value;
+
+        if (name === "") {
+            document.getElementById("output").innerHTML = "⚠️ Please enter your name";
+        } else {
+            document.getElementById("output").innerHTML = "Hello, " + name + " 👋 Welcome!";
+        }
+    }
+</script>
+
+</body>
+</html>
